@@ -10,7 +10,7 @@ This is where we'll store a variety of different files, which may include:
 - Mock ups
 - Business plan
 
-# Contact information:
+# Contact information
 
 Name | Email 
 --- | ---
