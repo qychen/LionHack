@@ -2,6 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def sellticket
+    event_id = params[:id]
+    @event = Event.find(event_id)
   end
   
   def about
