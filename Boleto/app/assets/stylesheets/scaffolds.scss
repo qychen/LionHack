@@ -1,6 +1,5 @@
 p.fuckgraph{
     background-position: center; 
-    background-image: image-url('Rplot.jpeg');
     background-repeat: no-repeat;
     width: 1000px;
     height: 800px;
@@ -62,9 +61,25 @@ body {
 header {
     height:200px;
     background-position: center; 
-    background-image: image-url('boletos.png');
+    background-image: image-url('boleto.png');
     background-repeat: no-repeat;
     background-size: 16%;
+    .fuck{
+    background-size: 10%;
+    }
+}
+footer {
+    height:500px;
+    background-image: image-url('boleto.png');
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+bottomstuff {
+    height:200px;
+    background-image: image-url('boleto.png');
+    background-repeat: no-repeat;
+    background-size: 10%;
+
 }
 
 p, ol, ul, td {
@@ -117,7 +132,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
+h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -126,16 +141,23 @@ div {
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
-  }
+}
 
-  ul li {
+ul li {
     font-size: 12px;
     list-style: square;
   }
 }
 table {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px transparent;
+    width: 50%;
+    color: white;
+    font-size: 25px;
+}
+.pretty{
+    border-collapse: collapse;
+    border: 1px transparent;
     width: 50%;
     color: white;
     font-size: 25px;
@@ -146,7 +168,6 @@ table.fuck {
     border: 1px solid black;    
     text-align: center;
 }
-
 th {
     height: 50px;
     text-align: left;
