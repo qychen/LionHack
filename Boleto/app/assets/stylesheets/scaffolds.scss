@@ -1,19 +1,24 @@
 btn-default-center{
-	background-position:center
+	background-position:center;
+	width: 1000px;
+	height: 1000px;
+}
+btn-default.custom {
+    height: 1000px;
 }
 .form-control-inline {
     min-width: 0;
     width: 1000px;
-    height: 35px;
+    height: 45px;
     display: inline;
 }
 p.fuckyou {
-	color: #007dff;
+	color: #003266;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 70px;
+	text-shadow: 1px 1px 3px gray;
+    font-size: 60px;
     width: 1800px;
     line-height: 60px;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 h1.fuckyou {
 	color: white;
