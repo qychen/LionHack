@@ -1,6 +1,18 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  def about
+  end
+
+  def sell
+  end
+
+  def blog
+  end
+
+  def contact
+  end
+
   def search
     search_word = params[:words]
     @search_result = Array.new
