@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :events
+  get 'events/search' => 'events#search'
   resources :events
 
   root 'events#index'

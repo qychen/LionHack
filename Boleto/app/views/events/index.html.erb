@@ -3,10 +3,9 @@
 <h1>boletos</h1>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Search for your event here">
+  <input type="text" id="search_field" class="form-control" placeholder="Search for your event here">
   <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Go!</button>
-    <td><%= link_to 'Search', class: 'btn btn-success' %></td>
+    <button class="btn btn-default" onclick=search() type="button">Go!</button>
   </span>
 </div><!-- /input-group -->
 
@@ -29,7 +28,6 @@
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= link_to 'Show', event %></td>
-        <%= event %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -40,3 +38,21 @@
 <br>
 
 <%= link_to 'New Event', new_event_path %>
+
+<script type="text/javascript">
+  function search(){
+    text = document.getElementById("search_field").value;
+    //words = text.split(" ");
+
+    window.location.assign("events/search?words="+text);
+    //$.ajax({
+    // type: "GET",
+    //  url: "/events/search",
+    //  data: {text:text}
+    //});
+  }
+</script>
+
+
+
+
