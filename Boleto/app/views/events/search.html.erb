@@ -1,14 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>boleto</h1>
-
-<div class="input-group">
-  <input type="text" class="form-control" placeholder="Search for...">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Go!</button>
-    <td><%= link_to 'Search', class: 'btn btn-success' %></td>
-  </span>
-</div><!-- /input-group -->
+<h1>Search Result</h1>
 
 <table>
   <thead>
@@ -29,14 +19,9 @@
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= link_to 'Show', event %></td>
-        <%= event %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
