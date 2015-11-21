@@ -1,3 +1,8 @@
+h1 {
+	color: red;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+}
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -29,7 +34,6 @@ pre {
 
 a {
   color: #000;
-
   &:visited {
     color: #666;
   }
@@ -39,7 +43,6 @@ a {
     background-color: #000;
   }
 }
-
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -64,7 +67,7 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
+h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -79,4 +82,15 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+    color: black;
+    font-size: 25px;
+}
+th {
+    height: 50px;
+    text-align: left;
 }
