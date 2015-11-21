@@ -1,3 +1,19 @@
+p.fuckgraph{
+    background-position: center; 
+    background-image: image-url('Rplot.jpeg');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 800px;
+    background-size: 100%;
+
+}
+h4.modal-title-fuck{
+	color: black;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+}
+
 btn-default-center{
 	background-position:center;
 	width: 1000px;
@@ -27,6 +43,11 @@ h1.fuckyou {
 }
 h1 {
 	color: white;
+}
+h3.fuckyou {
+	color: white;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
 }
 body {
   background-color: #fff;
@@ -119,9 +140,23 @@ table {
     color: white;
     font-size: 25px;
 }
+table.fuck {
+    border-collapse: collapse;
+    color: black;
+    border: 1px solid black;    
+    text-align: center;
+}
+
 th {
     height: 50px;
     text-align: left;
 }
-
-
+td.fuck{
+	color: black;
+}
+tr.fuck{
+	color: black;
+}
+th.fuck{
+	color: black;
+}

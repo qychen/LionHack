@@ -1,32 +1,13 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Event:</strong>
-  <%= @event.event_id %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @event.status %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<h1 class='fuckyou'>Event: <%= @event.event_id %> </h1>
+<h1 class='fuckyou'>Status: <%= @event.status %> </h1>
+<h1 class='fuckyou'>Title: <%= @event.title %> </h1>
+<h1 class='fuckyou'>Description: <%= @event.description%> </h1>
 
 
 
 <div class="container">
-  <h3>Avaliable Tickets</h3>
+  <h3 class='fuckyou'>Avaliable Tickets</h3>
   <div class="panel-group">
   	<% count = 0 %>
   	<% @ticket_result.each do |ticket| %>
@@ -55,26 +36,34 @@
 				      <div class="modal-content">
 				        <div class="modal-header">
 				          <button type="button" class="close" data-dismiss="modal">&times;</button>
-				          <h4 class="modal-title">Buy this ticket?</h4>
+				          <h4 class="modal-title-fuck">Buy this ticket?</h4>
 				        </div>
 				        <div class="modal-body">
 					       <table class='table'>
 							  <thead>
 							    <tr>
-							      <th> Ticket ID </th>
-							      <th> Seller ID </th>
-							      <th> Price </th>
+							      <th class='fuck'> Ticket ID </th>
+							      <th class='fuck'> Seller ID </th>
+							      <th class='fuck'> Price </th>
 							      <th colspan="3"></th>
 							    </tr>
 							  </thead>
 
+<<<<<<< HEAD
 							  <tbody>
 							      <tr>
 							        <td id="t_id"><%= tic.t_id %></td>
 							        <td id="seller_id"><%= tic.seller_id %></td>
 							        <td id="price"><%= tic.price %></td>
+=======
+							  <thead>
+							      <tr class='fuck'>
+							        <td class='fuck'><%= tic.t_id %></td>
+							        <td class='fuck'><%= tic.seller_id %></td>
+							        <td class='fuck'><%= tic.price %></td>
+>>>>>>> master
 							      </tr>
-							  </tbody>
+							  </thead>
 							</table>
 				        </div>
 				        <div class="modal-footer">
@@ -92,7 +81,7 @@
     <% end %>
   </div>
 </div>
-
+<center><p class='fuckgraph' 'margin-top: 0cm' ></p></center>
 <script type="text/javascript">
   function venmo(){
     localStorage.setItem("ss", "SS");
@@ -103,6 +92,7 @@
 
   }
 </script>
-
-
-
+<p style='margin-top:0cm'>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+</p>

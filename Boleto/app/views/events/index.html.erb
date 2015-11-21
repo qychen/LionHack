@@ -18,10 +18,10 @@
 
 
 <div>
-<p class='fuckyou' style='margin-top: 6.5cm; margin-left: 1cm'>
-We make buying and selling 
+<p class='fuckyou' style='margin-top: 6.0cm; margin-left: 0.8cm'>
+We're creating a better 
 <br>
-tickets less painful
+marketplace for buyers & sellers
 </p>
 </div>
 
@@ -45,3 +45,23 @@ tickets less painful
 <p style='margin-top: 10cm; margin-left: 0.5cm'>
 <%= link_to 'Add your event here', new_event_path %>
 </p>
+
+<div id="graph-wrapper">
+<div class="graph-info">
+        <a href="javascript:void(0)" class="visitors">Visitors</a>
+        <a href="javascript:void(0)" class="returning">Returning Visitors</a>
+        <a href="#" id="bars"><span></span></a>
+        <a href="#" id="lines" class="active"><span></span></a>
+    </div>
+<div class="graph-container">
+<div id="graph-lines"></div>
+<div id="graph-bars"></div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/jquery.flot.min.js"></script>
+<script>
+$(document).ready(function () {
+    // Graph scripts here
+});
+</script>
