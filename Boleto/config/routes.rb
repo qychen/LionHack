@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'tickets/pay' => 'tickets#pay'
   resources :tickets
+  get 'about' => 'events#about'
+  get 'sell' => 'events#sell'
+  get 'blog' => 'events#blog'
+  get 'contact' => 'events#contact'
+  
   get 'events/search' => 'events#search'
   resources :events
 

@@ -1,12 +1,27 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  def about
+  end
+
+  def sell
+  end
+
+  def blog
+  end
+
+  def contact
+  end
+
   def search
     search_word = params[:words]
     @search_result = Array.new
     @events = Event.all
     @events.each do |event|
       if event.title.downcase.include? search_word.downcase 
+        @search_result.push(event)
+      end
+      if event.description.downcase.include? search_word.downcase 
         @search_result.push(event)
       end
     end
