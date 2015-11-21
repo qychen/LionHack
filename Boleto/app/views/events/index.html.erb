@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 <header></header>
 <center><h1 font-color='red'>boletos</h1></center>
-<div class="input-group">
+
+<div class="input-group" style="margin-top: 0cm">
   <input type="text" class="form-control" placeholder="Search for your event here">
   <span class="input-group-btn">
     <button class="btn btn-default" type="button">Go!</button>
@@ -9,6 +10,13 @@
   </span>
 </div><!-- /input-group -->
 <center>
+
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+</div>
+
 <table class='table'>
   <thead>
     <tr>
@@ -28,7 +36,6 @@
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= link_to 'Show', event %></td>
-        <%= event %>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
