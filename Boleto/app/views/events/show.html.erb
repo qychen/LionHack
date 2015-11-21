@@ -58,7 +58,7 @@
 				          <h4 class="modal-title">Buy this ticket?</h4>
 				        </div>
 				        <div class="modal-body">
-					        <table class='table'>
+					       <table class='table'>
 							  <thead>
 							    <tr>
 							      <th> Ticket ID </th>
@@ -70,9 +70,9 @@
 
 							  <tbody>
 							      <tr>
-							        <td><%= tic.t_id %></td>
-							        <td><%= tic.seller_id %></td>
-							        <td><%= tic.price %></td>
+							        <td id="t_id"><%= tic.t_id %></td>
+							        <td id="seller_id"><%= tic.seller_id %></td>
+							        <td id="price"><%= tic.price %></td>
 							      </tr>
 							  </tbody>
 							</table>
@@ -95,7 +95,11 @@
 
 <script type="text/javascript">
   function venmo(){
-  	alert("venmo");
+    localStorage.setItem("ss", "SS");
+    localStorage.setItem("t_id", document.getElementById("t_id").innerText);
+    localStorage.setItem("seller_id", document.getElementById("seller_id").innerText);
+    localStorage.setItem("price", document.getElementById("price").innerText);
+    window.location.assign("https://api.venmo.com/v1/oauth/authorize?client_id=3190&scope=make_payments%20access_profile");
 
   }
 </script>

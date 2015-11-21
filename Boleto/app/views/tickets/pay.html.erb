@@ -1,0 +1,58 @@
+<h1>Payment</h1>
+
+	<table class='table'>
+	  <thead>
+	    <tr>
+	      <th> Ticket ID </th>
+	      <th> Seller ID </th>
+	      <th> Price </th>
+	      <th colspan="3"></th>
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	      <tr>
+	        <td id="t_id"></td>
+	        <td id="seller_id"></td>
+	        <td id="price"></td>
+	      </tr>
+	  </tbody>
+	</table>
+
+    <button type="button" class="btn btn-default" onclick=pay('<%= @token %>')>Confirm Payment</button>
+    <button type="button" class="btn btn-default" onclick='window.location.replace("http://localhost:3000");'>Cancel</button>
+
+<script type="text/javascript">
+
+    document.getElementById("t_id").innerText=localStorage.getItem("t_id");
+    document.getElementById("seller_id").innerText=localStorage.getItem("seller_id");
+    document.getElementById("price").innerText=localStorage.getItem("price");
+
+    function pay(token){
+    	price = parseFloat(localStorage.getItem("price"));
+		url='https://api.venmo.com/v1/payments';
+		//u=requests.post(url, params=payload)
+		//data=json.loads(u.text)
+		$.ajax({
+	    	type: "POST",
+	    	url: url,
+		    crossDomain: true,
+		    dataType: 'jsonp',
+		    data:{
+			    access_token: token,
+			    phone: "6177590517",
+			    note: "Ticket Payment",
+			    amount: price*0.7,
+			    audience: "Private"
+		    },
+		    success: function(data, status){
+	        alert("Data: " + data + "\nStatus: " + status);
+	    	}
+	    });
+	    
+    }
+</script>
+
+
+
+

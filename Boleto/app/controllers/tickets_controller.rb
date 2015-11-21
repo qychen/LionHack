@@ -7,6 +7,10 @@ class TicketsController < ApplicationController
     @tickets = Ticket.all
   end
 
+  def pay
+    @token = params[:access_token]
+  end
+
   # GET /tickets/1
   # GET /tickets/1.json
   def show

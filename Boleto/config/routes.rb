@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'tickets/pay' => 'tickets#pay'
   resources :tickets
+
+  
   get 'events/search' => 'events#search'
   resources :events
 
