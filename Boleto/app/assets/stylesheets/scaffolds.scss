@@ -28,11 +28,19 @@ btn-default.custom {
     display: inline;
 }
 p.fuckyou {
-	color: #003266;
+	color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-shadow: 1px 1px 3px gray;
     font-size: 60px;
     width: 1800px;
+    line-height: 60px;
+}
+p.fuckyoutoo {
+	color: white;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: 1px 1px 3px gray;
+    font-size: 40px;
+    width: 1000px;
     line-height: 60px;
 }
 h1.fuckyou {
@@ -54,22 +62,22 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: image-url('background.png');
+  background-image: image-url('background9.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 header {
-    height:200px;
+    height:240px;
     background-position: center; 
     background-image: image-url('boleto.png');
     background-repeat: no-repeat;
-    background-size: 16%;
+    background-size: 18%;
     .fuck{
     background-size: 10%;
     }
 }
 footer {
-    height:500px;
+    height:150px;
     background-image: image-url('boleto.png');
     background-repeat: no-repeat;
     background-size: 10%;
@@ -96,10 +104,11 @@ pre {
 
 a {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  color: #000;
+  color: white;
+  font-size: 30px;
 
   &:visited {
-    color: #666;
+    color: white;
   }
 
   &:hover {

@@ -29,54 +29,6 @@
   </center>
 </div>
 
-<center>
-<head>
-    <script type="text/javascript"
-          src="https://www.google.com/jsapi?autoload={
-            'modules':[{
-              'name':'visualization',
-              'version':'1',
-              'packages':['corechart']
-            }]
-          }"></script>
-
-    <script type="text/javascript">
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Days before event', '5th Percentile','Expected Price','95th Percentile'],
-          ['30',  10, 20, 30],
-          ['25',  48, 50, 52],
-          ['20',  48, 50, 52],
-          ['15',  48, 50, 52],
-          ['10',  28, 30, 39],
-          ['5',  28, 30, 39],
-          ['0' ,  65, 70, 90]
-        ]);
-
-        var options = {
-          title: 'Expected Ticket Price',
-          curveType: 'function',
-          fontSize: 18,
-          legend: { position: 'bottom' },
-          colors: ['blue','red','blue'],
-          vAxis: {format: 'currency'} ,
-          vAxes: { 0:{title: "Price"} },
-          hAxes: { 0:{title: "Number of days until the event"}}
-        };
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="curve_chart" style="width: 1150px; height: 600px"></div>
-  </body>
-</center>
-
-
 <div class="container">
   <h3 class='fuckyou'>Avaliable Tickets</h3>
   <div class="panel-group">
@@ -144,8 +96,59 @@
     <% end %>
   </div>
 </div>
+<center>
+<head style='margin-top: -1.5cm'>
+    <script type="text/javascript"
+          src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
 
-<header> </header>
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Days before event', '5th Percentile','Expected Price','95th Percentile'],
+          ['30',  10, 20, 30],
+          ['25',  48, 50, 52],
+          ['20',  48, 50, 52],
+          ['15',  48, 50, 52],
+          ['10',  28, 30, 39],
+          ['5',  28, 30, 39],
+          ['0' ,  65, 70, 90]
+        ]);
+
+        var options = {
+          title: '',
+          curveType: 'function',
+          fontSize: 18,
+          backgroundColor: { fill:'transparent' },
+          legend: { position: 'none' },
+          colors: ['blue','white','blue'],
+          vAxis: {textPosition: 'none'} ,
+          vAxes: { 0:{title: ""} },
+          hAxes: { 0:{title: "Days until Event"},
+          hAxis: { 	textStyle:{color: 'white'}
+          		}
+          }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 1140px; height: 250px"></div>
+  </body>
+</center>
+
+
+<header style="margin-top: 6cm"> </header>
 
 <script type="text/javascript">
   function venmo(){
