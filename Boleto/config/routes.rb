@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tickets
   get 'events/search' => 'events#search'
   resources :events
 

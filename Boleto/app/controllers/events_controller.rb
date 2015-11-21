@@ -21,6 +21,24 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    # get the tickets info for this event
+    event_id = params[:id]
+    event = Event.find(event_id)
+    #Client.find_by_sql("SELECT * FROM clients 
+    #INNER JOIN orders ON clients.id = orders.client_id 
+    #ORDER clients.created_at desc")
+    #select distinct price from tickets where event_id=43434 order by price asc
+    #SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1
+    @price = Ticket.find_by_sql("SELECT DISTINCT price FROM tickets WHERE event_id='"+event.event_id+"' ORDER BY tickets.price asc")
+    #@aa = Event.find_by_sql("SELECT * FROM events")
+    @ticket_result = Array.new
+    @price.each do |p|
+      tic_info=Ticket.find_by_sql("SELECT t_id,seller_id,price FROM tickets WHERE price="+p.price.to_s)
+      @ticket_result.push(tic_info)
+
+    end
+
+
   end
 
   # GET /events/new

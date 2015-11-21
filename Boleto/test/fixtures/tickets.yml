@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  t_id: MyString
+  event_id: MyString
+  price: 1.5
+  seller_id: MyString
+
+two:
+  t_id: MyString
+  event_id: MyString
+  price: 1.5
+  seller_id: MyString
