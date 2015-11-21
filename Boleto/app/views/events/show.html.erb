@@ -90,7 +90,7 @@
 				  </div>
         	</div>
     	<% end %>
-        <div class="panel-footer">Panel Footer</div>
+        <div class="panel-footer"></div>
       </div>
     </div>
     <% end %>
@@ -130,10 +130,12 @@
           legend: { position: 'none' },
           colors: ['blue','white','blue'],
           vAxis: {textPosition: 'none'} ,
-          vAxes: { 0:{title: ""} },
-          hAxes: { 0:{title: "Days until Event"},
-          hAxis: { 	textStyle:{color: 'white'}
-          		}
+          vAxes: { 0:	{title: "Price", 
+          				titleTextStyle:{color: 'white'},
+          				textStyle:{color: 'white'}}
+          		},
+          hAxes: { 0:{title: "Days until Event", textStyle:{color: 'white'},
+          titleTextStyle: {color: 'white'} } 
           }
         };
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
