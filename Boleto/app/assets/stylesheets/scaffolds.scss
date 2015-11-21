@@ -1,28 +1,43 @@
+btn-default-center{
+	background-position:center
+}
+.form-control-inline {
+    min-width: 0;
+    width: 1000px;
+    height: 35px;
+    display: inline;
+}
 p.fuckyou {
-	color: black;
+	color: #007dff;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 20px;
+    font-size: 70px;
+    width: 1800px;
+    line-height: 60px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 h1.fuckyou {
-	color: black;
+	color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 80px;
+    font-size: 40px;
+}
+h1 {
+	color: white;
 }
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: image-url('background.jpeg');
+  background-image: image-url('background.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
 header {
-    height:150px;
+    height:200px;
+    background-position: center; 
     background-image: image-url('boletos.png');
     background-repeat: no-repeat;
-    background-size: 20%;
-    width:960px;
+    background-size: 16%;
 }
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -38,6 +53,7 @@ pre {
 }
 
 a {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #000;
   &:visited {
     color: #666;
@@ -92,10 +108,12 @@ table {
     border-collapse: collapse;
     border: 1px solid black;
     width: 50%;
-    color: black;
+    color: white;
     font-size: 25px;
 }
 th {
     height: 50px;
     text-align: left;
 }
+
+

@@ -1,36 +1,27 @@
 <p id="notice"><%= notice %></p> 
 <header></header>
-<center><h1 class='fuckyou' style="margin-top: -1cm">boletos</h1></center>
+<center><h1 style='margin-top:-0.10cm' class='fuckyou'>the intelligent marketplace for tickets</h1></center>
+<center>
+<div class="custom-links" style='margin-top: -0.20cm' color='white'>
+<a href="/About/">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="/Careers/">Careers</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="/Sell/">Sell</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="/blog/">Blog</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+<a href="/Contact/">Contact</a> 
+</div>
+</center>
 
-<div class="input-group" style="margin-top: 0cm">
-  <input type="text" id="search_field" class="form-control" placeholder="Search for your event here">
-  <span class="input-group-btn">
-    <button class="btn btn-default" onclick=search() type="button">Go!</button>
-  </span>
-</div><!-- /input-group -->
+<center> <form id="yourForm" style='margin-top: 0.25cm'>
+	<input type="text" id="search_field" placeholder='Search for your event here' class='form-control-inline' submit=search()>
+	<button class="btn btn-default" style = 'margin-left:-0.11cm' onclick=search() type="button">Go!</button>
+</form></center>
 
 <div>
 <center>
-<p class='fuckyou' style='margin-top: 1cm'>
-Welcome to belotos! We're here to make buying and selling tickets to events less awful.
+<p class='fuckyou' style='margin-top: 7cm'>
+We make buying and selling tickets less painful
 </p>
+
+
 </center>
 </div>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
-
-<script type="text/javascript">
-  function search(){
-    text = document.getElementById("search_field").value;
-    //words = text.split(" ");
-
-    window.location.assign("events/search?words="+text);
-    //$.ajax({
-    // type: "GET",
-    //  url: "/events/search",
-    //  data: {text:text}
-    //});
-  }
-</script>
