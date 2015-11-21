@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p> 
-<header></header>
-<center><h1 style='margin-top:-0.10cm' class='fuckyou'>the intelligent marketplace for tickets</h1></center>
+<section id="section1">
+    <header></header>
+    <center><h1 style='margin-top:-0.10cm' class='fuckyou'>the intelligent marketplace for tickets</h1></center>
+</section>
+<section id="section2">
 <center>
 <div class="custom-links" style='margin-top: -0.20cm' color='white'>
 <a href="/About/">About</a>&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -16,7 +19,6 @@
 	<button class="btn btn-default" style = 'margin-left:-0.11cm;height:46px' onclick=search() type="button">Go!</button>
 </form></center>
 
-
 <div>
 <p class='fuckyou' style='margin-top: 6.0cm; margin-left: 0.8cm'>
 We're creating a better 
@@ -24,6 +26,8 @@ We're creating a better
 marketplace for buyers & sellers
 </p>
 </div>
+
+</section>
 
 
 <script type="text/javascript">
@@ -36,7 +40,12 @@ marketplace for buyers & sellers
     //  url: "/events/search",
     //  data: {text:text}
     //});
-  }
+    }
+    $("#search_field").keyup(function(event){
+        if(event.keyCode == 13){
+            search();
+        }
+    });
 </script>
 
 

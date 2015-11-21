@@ -9,6 +9,9 @@ class EventsController < ApplicationController
       if event.title.downcase.include? search_word.downcase 
         @search_result.push(event)
       end
+      if event.description.downcase.include? search_word.downcase 
+        @search_result.push(event)
+      end
     end
   end
 
