@@ -18,7 +18,9 @@
         <td><%= event.status %></td>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
-        <td><%= link_to 'Details', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Buy', event %></td>
+        <td><%= link_to 'Sell', "sellticket/".concat(event.id) %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,3 +1,7 @@
+require 'net/http'
+require 'net/https'
+
+
 class TicketsController < ApplicationController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
 
@@ -8,7 +12,16 @@ class TicketsController < ApplicationController
   end
 
   def pay
-    @token = params[:access_token]
+    token = params[:access_token]
+
+    uri = URI.parse("https://api.venmo.com")
+    https = Net::HTTP.new(uri.host, uri.port)
+    https.use_ssl = true
+    #http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    request = Net::HTTP::Post.new("/v1/payments")
+    request.set_form_data({'access_token' => token, 'phone' => '6177590517', 'note' => 'Ticket Payment', 'amount' => '1', 'audience' => 'Private'})
+    @response = https.request(request)
+
   end
 
   # GET /tickets/1
