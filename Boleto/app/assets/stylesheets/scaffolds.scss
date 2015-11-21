@@ -1,9 +1,55 @@
+<<<<<<< HEAD
+=======
+btn-default-center{
+	background-position:center;
+	width: 1000px;
+	height: 1000px;
+}
+btn-default.custom {
+    height: 1000px;
+}
+.form-control-inline {
+    min-width: 0;
+    width: 1000px;
+    height: 45px;
+    display: inline;
+}
+p.fuckyou {
+	color: #003266;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: 1px 1px 3px gray;
+    font-size: 60px;
+    width: 1800px;
+    line-height: 60px;
+}
+h1.fuckyou {
+	color: white;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
+}
+h1 {
+	color: white;
+}
+>>>>>>> master
 body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+<<<<<<< HEAD
+=======
+  background-image: image-url('background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header {
+    height:200px;
+    background-position: center; 
+    background-image: image-url('boletos.png');
+    background-repeat: no-repeat;
+    background-size: 16%;
+>>>>>>> master
 }
 
 p, ol, ul, td {
@@ -19,6 +65,7 @@ pre {
 }
 
 a {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #000;
 
   &:visited {
@@ -71,3 +118,19 @@ div {
     list-style: square;
   }
 }
+<<<<<<< HEAD
+=======
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 50%;
+    color: white;
+    font-size: 25px;
+}
+th {
+    height: 50px;
+    text-align: left;
+}
+
+
+>>>>>>> master
