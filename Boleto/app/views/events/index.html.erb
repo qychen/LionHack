@@ -2,11 +2,21 @@
 <header></header>
 <center><h1 class='fuckyou' style="margin-top: -1cm">boletos</h1></center>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<h1>boletos</h1>
+
 <div class="input-group">
+  <input type="text" id="search_field" class="form-control" placeholder="Search for your event here">
+=======
+<div class="input-group" style="margin-top: 0cm">
+=======
+<div class="input-group">
+>>>>>>> master
   <input type="text" class="form-control" placeholder="Search for your event here">
+>>>>>>> master
   <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Go!</button>
-    <td><%= link_to 'Search', class: 'btn btn-success' %></td>
+    <button class="btn btn-default" onclick=search() type="button">Go!</button>
   </span>
 </div><!-- /input-group -->
 <center>
@@ -40,3 +50,21 @@
 <br>
 
 <%= link_to 'New Event', new_event_path %>
+
+<script type="text/javascript">
+  function search(){
+    text = document.getElementById("search_field").value;
+    //words = text.split(" ");
+
+    window.location.assign("events/search?words="+text);
+    //$.ajax({
+    // type: "GET",
+    //  url: "/events/search",
+    //  data: {text:text}
+    //});
+  }
+</script>
+
+
+
+
