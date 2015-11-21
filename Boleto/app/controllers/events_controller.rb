@@ -6,7 +6,7 @@ class EventsController < ApplicationController
     @search_result = Array.new
     @events = Event.all
     @events.each do |event|
-      if event.title.include? search_word
+      if event.title.downcase.include? search_word.downcase 
         @search_result.push(event)
       end
     end
