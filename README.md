@@ -9,6 +9,7 @@ This is where we'll store a variety of different files, which may include:
 - Presentation
 - Mock ups
 - Business plan
+- Other stuff
 
 # Contact information
 
