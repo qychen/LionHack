@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'sell' => 'events#sell'
   get 'blog' => 'events#blog'
   get 'contact' => 'events#contact'
-  get 'events/sellticket/:id' => 'events#sellticket'
+  get 'events/:id/edit/sell' => 'events#sellticket'
   
   get 'events/search' => 'events#search'
   resources :events
